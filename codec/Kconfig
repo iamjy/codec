@@ -1,0 +1,19 @@
+#
+# MV-T12 Video Processor Configuration
+#
+
+menu "MV-T12 video processor driver support"
+
+config MV_VPU
+	tristate "MV-T12 VPU driver"
+	default y
+	help
+	    This driver is a sort of virtual video drivers customized by Mn_nH company.
+
+config MV_VPU_DEBUG
+	tristate "MV-T12 VPU debugging support"
+	depends on MV_VPU
+	help
+	    This is needed for driver debugging support
+
+endmenu
